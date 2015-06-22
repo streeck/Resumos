@@ -2,7 +2,7 @@
 
 ---
 
-## Transação:
+## Transação
 
 - Unidade lógica de processamento no BD.
 - Operações: `INSERT`, `DELETE`, `UPDATE`, `SELECT`
@@ -10,11 +10,13 @@
 
 ---
 
-#### Escalonamento:
+#### Escalonamento
 
 - Operações: `read`, `write`, `commit`, `abort`
+
 ##### Abort:
 - Quando uma transação é abortada, seus efeitos devem ser **descartados**.
+
 ##### Efeitos:
 - Nos dados: `undo` nos valores escritos pela transação.
 - Em outras transações: `abortar` transações que leram valores escritos da transação orignialmente abortada.
@@ -106,7 +108,7 @@ Caso o procedimento esteja vulnerável, todas as consultas sintaticamente válid
 
 ---
 
-## Leitura complementar:
+## Leitura complementar
 
 ##### Transação
 - **Capítulo 15** do livro: Silberschatz, Abraham; Korth, Henry F; Sudarshan, S. **Sistema de banco de dados**.
