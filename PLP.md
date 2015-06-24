@@ -56,8 +56,11 @@ O resultado de um trecho não afetará de modo algum outro trecho, a menos que o
 
 ##### Tudo é função
 Inclusive o `if`. Que possui a seguinte forma:
+
 `if exp then exp1 else exp2`
+
 O que é equivalente a uma função de forma explicita:
+
 `(if exp, exp1, exp2)`
 
 ### Lisp
@@ -95,3 +98,40 @@ O que é equivalente a uma função de forma explicita:
   + `(null L)`. Caso esta expressão seja verdadeira, `cond` retorna `nil`.
   + `(eq x (car L))`. Compara **x** com **(car L)**. Se forem iguais, retorna `true`.
   + `(T(membro x (cdr L)))`. Chamada recursiva.
+
+### Linguagem FP
+> Puramente funcional. Não possui variáveis e oferece muitas possibilidades de combinar funções além da composição.
+
+Creio aqui que a única coisa que valha a pena mencionar são os diferentes mecanismos de combinar funções.
+
+1. Composição
+2. Construção
+3. Aplique a todos
+4. Condição
+5. Enquanto
+
+### Haskell e SML
+> Linguagens funcionais puras, estaticamente tipadas e com alto grau de polimorfismo.
+
+#### SML
+> Suporte a tipos básicos: `int`, `boolean`, `String`, etc.
+> 
+> Listas de forma semelhante a LISP. Exemplo: `[1, 2, 3]`.
+
+Sendo fortemente tipada, listas heterogêneas(elementos de vários tipos) são ilegais.
+
+No entanto, parâmetros de função podem ser declarados sem tipo. Exemplo:
+```sml
+succ(n) = n + 1
+```
+
+
+
+
+
+
+
+
+
+
+
