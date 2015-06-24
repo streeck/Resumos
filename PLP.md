@@ -16,7 +16,49 @@ Estudar o texto da apostila + artigo _"Algebraic Data Type"_
 
 ## Linguagens Funcionais
 
-Consideram o programa como uma função matemática.
+Consideram o programa como uma função matemática. Todas as computações são feitas por funções que recebem como parâmetros outras funções.
+Conceito de variável não existe. Não há atribuição.
+
+O professor discorre na apostila sobre o paradigma imperativo, etc.
+
+##### Como eliminar características dinâmicas de algoritmos?
+> Remover o comando de atribuição e consequentemente comandos de repetição como `for` e `while`.
+
+> Não há mais passagem de parâmetro por referência e nem váriaveis globais.
+>> Existe no entanto **constantes globais**.
+
+Na passagem de parâmetros o valor dos parâmetros reais é copiado.
+> Isto é chamado de **inicialização** que é diferente de atribuição.
+>> Inicialização cria uma posição de memória e aloca um valor imediatamente após sua criação.
+>> 
+>> Após inicializado, o valor armazenado não pode ser modificado.
+
+Mecanismo principal de repetição de código: **recursão**.
+
+##### Diferença entre linguagens Imperativas e Declarativas.
+Imperativas:
+- Significado depende da dinâmica do programa.
+
+Declarativa:
+- Significado estático.
+
+##### Transparência Referencial
+> Função cujo valor de retorno depende apenas dos valores dos parâmetros.
+
+O resultado de um trecho não afetará de modo algum outro trecho, a menos que o primeiro trecho seja uma expressão passada como parâmetro ao segundo.
+
+> Visto que não existem efeitos colaterais, uma função em uma Linguagem Funcional retornará sempre o mesmo valor dados os mesmo parâmetros.
+>> Logo, é possível avaliar em paralelo funções em uma expressão.
+>
+> **Exemplo:** `f( g(x), h(x) ) + p(y)`
+> 
+> Pode-se calcular `g(x)` `h(x)` e `p(y)` ao mesmo tempo.
+
+##### Tudo é função
+Inclusive o `if`. Que possui a seguinte forma:
+`if exp then exp1 else exp2`
+O que é equivalente a uma função de forma explicita:
+`(if exp, exp1, exp2)`
 
 ### Lisp
 
@@ -51,5 +93,5 @@ Consideram o programa como uma função matemática.
 - Comparação de igualdade feito com `eq`
 - `cond` é um `if` para manipular várias expressões. No caso temos 3 expressões:
   + `(null L)`. Caso esta expressão seja verdadeira, `cond` retorna `nil`.
-  + `(eq x (car L))`. Compara **x** com **(car L)**.
-  + `T`.
+  + `(eq x (car L))`. Compara **x** com **(car L)**. Se forem iguais, retorna `true`.
+  + `(T(membro x (cdr L)))`. Chamada recursiva.
