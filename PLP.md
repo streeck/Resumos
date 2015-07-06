@@ -1,5 +1,16 @@
 # Resumo - Paradigmas de Linguagens de Programação
 
+### P1
+
+Está eliminado:
+Capítulo 1
+- Seções: 1.1, 1.2, 1.4, 1.5 e 1.8
+Capítulo 2
+
+
+
+### P2
+
 ##### Linguagens Funcionais
 Estudar o texto da apostila + artigo _"Algebraic Data Type"_
 
@@ -112,6 +123,8 @@ Creio aqui que a única coisa que valha a pena mencionar são os diferentes meca
 
 ### Haskell e SML
 > Linguagens funcionais puras, estaticamente tipadas e com alto grau de polimorfismo.
+> 
+> **Observação:** na apostila o prof. não utiliza a sintaxe de Haskell e/ou SML. É utilizado uma sintaxe semelhante a do começo deste capítulo.
 
 #### SML
 > Suporte a tipos básicos: `int`, `boolean`, `String`, etc.
@@ -121,9 +134,22 @@ Creio aqui que a única coisa que valha a pena mencionar são os diferentes meca
 Sendo fortemente tipada, listas heterogêneas(elementos de vários tipos) são ilegais.
 
 No entanto, parâmetros de função podem ser declarados sem tipo. Exemplo:
-```sml
-succ(n) = n + 1
-```
+
+`succ(n) = n + 1`
+> Neste caso o compilador descobre que **n** deve ser inteiro, pois a operação `+` em SML exige que seus operandos sejam do mesmo tipo e visto que `1` é do tipo `int`, **n** deve ser `int` e o resultado também.
+
+#### Haskell
+
+### Listas Infinitas e _Lazy Evaluation_
+
+### Funções de Ordem Mais Alta
+
+### Devaneios sobre Linguagens Funcionais
+
+
+## Prolog - Programming in Logic
+
+
 
 
 
